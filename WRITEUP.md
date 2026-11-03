@@ -20,7 +20,9 @@ XXXX
 
 ### The settings you chose, and why
 
-XXXX
+- REMOVE_STOP_WORDS = True: People write questions with lots of filler ("a movie where a guy..."), and those words would otherwise match nearly every overview. I'd rather the score come from content words.
+- MIN_MOVIES = 1: Rare words are the whole point of TF-IDF. A name like "Punxsutawney" appears in one overview, and a higher cutoff would throw away exactly the words that identify a movie.
+- REPEATS_COUNT_LESS = True: Overviews are only about 45 words, so a word said twice is probably just phrasing. I don't want one repeated word to outweigh everything else in the summary.
 
 ## Part 2: Top terms
 
